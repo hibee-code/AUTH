@@ -30,13 +30,13 @@ app.post("/check",(req,res) => {
 if(userIsAuth){
     res.render("secret");
    }else{
-    res.render("submit");
+    res.redirect("/");
    }
 });
 
 app.post("/logout",(req,res) =>{
     userIsAuth = false;
-    res.render("submit")
+    res.redirect("/")
 })
 
 function Server(){
